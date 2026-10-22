@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A0A0C">
+  <meta name="description" content="BB — Black Bulls. Where Legends Connect. Share moments, discover people, and build your circle.">
+  <title>BB — Black Bulls · Where Legends Connect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="clover-gold" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#FFE27A"></stop>
+        <stop offset="48%" stop-color="#F2C94C"></stop>
+        <stop offset="100%" stop-color="#B8952E"></stop>
+      </linearGradient>
+      <symbol id="clover" viewBox="0 0 100 100">
+        <g transform="translate(50 50)" fill="url(#clover-gold)">
+          <path d="M0 0 C-14 2-20-12-10-24 C-4-31 0-32 0-32 C0-32 4-31 10-24 C20-12 14 2 0 0Z"></path>
+          <path d="M0 0 C-14 2-20-12-10-24 C-4-31 0-32 0-32 C0-32 4-31 10-24 C20-12 14 2 0 0Z" transform="rotate(72)"></path>
+          <path d="M0 0 C-14 2-20-12-10-24 C-4-31 0-32 0-32 C0-32 4-31 10-24 C20-12 14 2 0 0Z" transform="rotate(144)"></path>
+          <path d="M0 0 C-14 2-20-12-10-24 C-4-31 0-32 0-32 C0-32 4-31 10-24 C20-12 14 2 0 0Z" transform="rotate(216)"></path>
+          <path d="M0 0 C-14 2-20-12-10-24 C-4-31 0-32 0-32 C0-32 4-31 10-24 C20-12 14 2 0 0Z" transform="rotate(288)"></path>
+          <circle r="3.4" fill="#0A0A0C"></circle>
+          <circle r="1.3" fill="#FFE27A"></circle>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip-link" href="#main-container-content">Skip to content</a>
+  <div id="app">
+    <section id="auth-container" class="container auth-stage">
+      <div class="auth-card">
+        <header class="auth-brand">
+          <span class="clover-mark clover-mark--lg"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#clover"></use></svg></span>
+          <span class="wordmark"><span class="wordmark-main">BB</span><span class="wordmark-sub">BLACK BULLS</span></span>
+          <p class="tagline">Where Legends Connect.</p>
+        </header>
+        <div id="login-form">
+          <h2>Welcome back</h2>
+          <form id="login-form-element">
+            <label for="login-email">Email address</label>
+            <input type="email" id="login-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="Your password" autocomplete="current-password" required>
+            <button type="submit"><span>Log in</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          </form>
+          <p class="auth-switch">New to BB? <a href="#" id="show-register">Create an account</a></p>
+        </div>
+        <div id="register-form" style="display:none">
+          <h2>Join the circle</h2>
+          <form id="register-form-element">
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username" name="username" placeholder="Choose a username" autocomplete="username" minlength="3" required>
+            <label for="reg-email">Email address</label>
+            <input type="email" id="reg-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <label for="reg-name">Display name</label>
+            <input type="text" id="reg-name" name="name" placeholder="How people know you" autocomplete="name" required>
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" name="new-password" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+            <button type="submit"><span>Create account</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          </form>
+          <p class="auth-switch">Already a member? <a href="#" id="show-login">Log in</a></p>
+        </div>
+      </div>
+    </section>
+
+    <div id="main-container" class="app-shell" style="display:none">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <header class="sidebar-head">
+          <a class="brand" href="#home" data-view="home" aria-label="Black Bulls home">
+            <span class="clover-mark"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#clover"></use></svg></span>
+            <span class="brand-text"><span class="brand-name">BB</span><span class="brand-sub">BLACK BULLS</span></span>
+          </a>
+        </header>
+        <nav class="nav" aria-label="Main navigation">
+          <button class="nav-item active" type="button" data-view="home" aria-current="page"><i class="fas fa-house" aria-hidden="true"></i><span class="nav-label">Home</span></button>
+          <button class="nav-item" type="button" data-view="chats" aria-label="Chats, coming soon"><i class="fas fa-comment-dots" aria-hidden="true"></i><span class="nav-label">Chats</span><span class="nav-badge">Soon</span></button>
+          <button class="nav-item" type="button" data-view="communities" aria-label="Communities, coming soon"><i class="fas fa-users" aria-hidden="true"></i><span class="nav-label">Communities</span><span class="nav-badge">Soon</span></button>
+          <button class="nav-item" type="button" data-view="discover"><i class="fas fa-compass" aria-hidden="true"></i><span class="nav-label">Discover</span></button>
+          <button class="nav-item" type="button" data-view="profile"><i class="fas fa-user" aria-hidden="true"></i><span class="nav-label">Profile</span></button>
+        </nav>
+        <footer class="sidebar-foot">
+          <div class="mini-profile">
+            <img id="sidebar-avatar" class="mini-avatar" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22%3E%3Crect width=%2280%22 height=%2280%22 rx=%2240%22 fill=%22%2317171C%22/%3E%3Ccircle cx=%2240%22 cy=%2230%22 r=%2212%22 fill=%22%23F2C94C%22/%3E%3Cpath d=%22M14 74c2-15 12-23 26-23s24 8 26 23%22 fill=%22%23F2C94C%22/%3E%3C/svg%3E" alt="">
+            <div class="mini-meta"><div id="sidebar-name" class="mini-name">Loading…</div><div id="sidebar-username" class="mini-username">@…</div></div>
+          </div>
+          <button id="logout-btn" class="logout-btn" type="button" data-logout aria-label="Log out"><i class="fas fa-arrow-right-from-bracket" aria-hidden="true"></i><span>Log out</span></button>
+        </footer>
+      </aside>
+
+      <div class="workspace">
+        <header class="mobile-topbar">
+          <a href="#home" class="brand brand--mini" data-view="home" aria-label="Black Bulls home"><span class="clover-mark clover-mark--sm"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#clover"></use></svg></span><span class="brand-name">BB</span></a>
+          <span class="mobile-wordmark">BLACK BULLS</span>
+          <button class="logout-btn mobile-logout" type="button" data-logout aria-label="Log out"><i class="fas fa-arrow-right-from-bracket" aria-hidden="true"></i></button>
+        </header>
+        <main id="main-container-content" tabindex="-1">
+          <section id="feed-view" class="view" aria-labelledby="home-heading">
+            <header class="hero page-hero">
+              <div><p class="eyebrow">BB <span aria-hidden="true">·</span> MOMENTS</p><h1 id="home-heading">Where Legends <span>Connect.</span></h1><p class="lede">Share what's on your mind, catch up with your circle, and find your people.</p></div>
+              <button id="refresh-feed-btn" class="icon-button icon-btn" type="button" aria-label="Refresh feed" title="Refresh feed"><i class="fas fa-rotate" aria-hidden="true"></i></button>
+            </header>
+            <div class="feed-heading"><div><p class="eyebrow">THE HERD</p><h2>Your home feed</h2></div></div>
+            <section class="create-post-card composer" aria-label="Create a post">
+              <div class="composer-heading composer-head"><span class="composer-avatar" aria-hidden="true"><i class="fas fa-feather"></i></span><div><strong>Start a conversation</strong><span>Your voice belongs here.</span></div></div>
+              <div class="post-input-area">
+                <label class="sr-only" for="post-content">Write a post</label>
+                <textarea id="post-content" placeholder="What's on your mind?" maxlength="1000" rows="3" aria-describedby="post-guidance post-character-count"></textarea>
+                <div class="composer-footer composer-foot"><span id="post-guidance">Keep it kind. Keep it you.</span><div class="composer-actions"><span id="post-character-count" class="character-count char-count" aria-live="polite">0 / 1000</span><button id="create-post-btn" class="btn-primary" type="button"><i class="fas fa-paper-plane" aria-hidden="true"></i> Share post</button></div></div>
+              </div>
+            </section>
+            <div class="feed-toolbar"><h2>Latest from your circle</h2><label for="feed-sort">Sort<select id="feed-sort"><option value="newest">Newest</option><option value="popular">Most liked</option><option value="oldest">Oldest</option></select></label></div>
+            <div id="posts-container" aria-live="polite"></div>
+          </section>
+
+          <section id="chats-view" class="view" style="display:none" aria-labelledby="chats-heading">
+            <div class="feature-card coming-soon"><span class="feature-emblem clover-mark clover-mark--xl"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#clover"></use></svg></span><p class="eyebrow">BB CONNECT</p><h1 id="chats-heading" class="coming-title">Chats</h1><p class="coming-lede">Private messages, group chats, voice notes, and calls — coming to BB soon.</p><ul class="feature-list"><li><i class="fas fa-comments" aria-hidden="true"></i><span><strong>Real conversations</strong> with your circle</span></li><li><i class="fas fa-microphone" aria-hidden="true"></i><span><strong>Voice notes</strong> when typing isn’t enough</span></li><li><i class="fas fa-shield-halved" aria-hidden="true"></i><span><strong>Privacy-first</strong> messaging design</span></li></ul><p class="coming-note">Messaging isn’t available yet. Your feed and discovery are ready to use.</p></div>
+          </section>
+
+          <section id="communities-view" class="view" style="display:none" aria-labelledby="communities-heading">
+            <div class="feature-card coming-soon"><span class="feature-emblem clover-mark clover-mark--xl"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#clover"></use></svg></span><p class="eyebrow">BB COMMUNITIES</p><h1 id="communities-heading" class="coming-title">Find your people.</h1><p class="coming-lede">Communities are on the way: dedicated spaces for the interests and conversations that bring your circle together.</p><ul class="feature-list"><li><i class="fas fa-hashtag" aria-hidden="true"></i><span><strong>Interest-led spaces</strong> to explore together</span></li><li><i class="fas fa-user-group" aria-hidden="true"></i><span><strong>Closer circles</strong> for friends and projects</span></li><li><i class="fas fa-comments" aria-hidden="true"></i><span><strong>Better conversations</strong> around what matters</span></li></ul><p class="coming-note">Community creation isn’t available yet. Find people in Discover.</p></div>
+          </section>
+
+          <section id="search-view" class="view" style="display:none" aria-labelledby="discover-heading">
+            <header class="hero page-hero"><div><p class="eyebrow">FIND YOUR PEOPLE</p><h1 id="discover-heading">Discover</h1><p class="lede">Search by name or username to find your next conversation.</p></div></header>
+            <div class="search-container search-card"><label class="sr-only" for="search-input">Search users by name or username</label><div class="search-field"><i class="fas fa-magnifying-glass" aria-hidden="true"></i><input type="search" id="search-input" placeholder="Try a name or @username" autocomplete="off"></div><div id="search-results" aria-live="polite"></div></div>
+          </section>
+
+          <section id="profile-view" class="view" style="display:none" aria-label="Profile"><div class="profile-header" id="profile-header"></div><div class="profile-posts" id="profile-posts"></div></section>
+        </main>
+      </div>
+    </div>
+    <div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
